@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>HOST - Embedded Apps Kitchen Sink</title>
+  <!-- Import the app's stylesheet -->
+  <link rel="stylesheet" href="/style.css" />
+
+  <!-- Import the SDK below, either the emulator sdk or the production SDK -->
+  <script src="/WebexEmbeddedAppEmulatorFramework.js" defer></script>
+  
+  <!-- Import the app's javascript file -->
+  <script src="/index.js" defer></script>
+</head>
+<body>
+  <div>
+    <h2>Embedded App Kitchen Sink</h2>
+    <div>
+      This sample application shows how to utilize the Webex Embedded App Emulator Framework to build an app.  <a href="https://glitch.com/edit/#!/webex-embedded-application">Click Here</a> to see the source.
+    </div>
+
+    <h4>Methods</h4>
+    <button onclick="handleGetUser()">getUser()</button>
+    <button onclick="handleGetMeeting()">getMeeting()</button>
+    <button onclick="handleGetSpace()">getSpace()</button>
+
+    <h4>You're the HOST... Launch the app for everyone</h4>
+    <div>
+      <input id="shareUrl" placeholder="URL to open on participant" size="45" value="https://webex-embedded-application.glitch.me/participant.html" />  
+    </div>
+    <div>
+      <button onclick="handleSetShare()">setShareUrl()</button>
+      <button onclick="handleClearShare()">clearShareUrl()</button>
+    </div>
+  </div>
+  <h4>Recent Event Logs</h4>
+  <div>
+    <ul id="console" />
+  </div>
+</body>
+</html>
+
