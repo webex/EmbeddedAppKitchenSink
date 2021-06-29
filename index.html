@@ -17,15 +17,10 @@
   <div>
     <h2>Embedded App Kitchen Sink</h2>
     <div>
-      This sample application shows how to utilize the Webex Embedded App Emulator Framework to build an app.  <a href="https://glitch.com/edit/#!/webex-embedded-application">Click Here</a> to see the source.
+      You're the HOST... On this page you will configure the embedded application and launch it for everyone. This sample application shows how to utilize the Webex Embedded App Emulator Framework to build an app.  <a href="https://github.com/WebexSamples/EmbeddedAppSample">Click Here</a> to see the source.
     </div>
 
-    <h4>Methods</h4>
-    <button onclick="handleGetUser()">getUser()</button>
-    <button onclick="handleGetMeeting()">getMeeting()</button>
-    <button onclick="handleGetSpace()">getSpace()</button>
-
-    <h4>You're the HOST... Launch the app for everyone</h4>
+    <h4>Launch the embedded app to participants</h4>
     <div>
       <input id="shareUrl" placeholder="URL to open on participant" size="45" value="https://webexsamples.github.io/EmbeddedAppSample/participant.html" />  
     </div>
@@ -33,6 +28,12 @@
       <button onclick="handleSetShare()">setShareUrl()</button>
       <button onclick="handleClearShare()">clearShareUrl()</button>
     </div>
+
+    <h4>Methods</h4>
+    <button onclick="handleGetUser()">getUser()</button>
+    <button onclick="handleGetMeeting()">getMeeting()</button>
+    <button onclick="handleGetSpace()">getSpace()</button>
+    
   </div>
   <h4>Recent Event Logs</h4>
   <div>

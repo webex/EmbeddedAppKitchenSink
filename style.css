@@ -5,6 +5,11 @@
   --color-primary: #F7F7F7;
   --color-input-background: #FFFFFF;
   --color-input-border: #000000;
+  --color-button-background: #07C1F5;
+  --color-button-text: #F7F7F7;
+  --color-button-border: #07C1F5;
+  --color-button-hover: #00A0D1;
+  --color-button-pressed: #007AA3;
   --font-family: "HK Grotesk";
   --font-family-header: "HK Grotesk";
 }
@@ -37,11 +42,11 @@ END default styles
 body {
   font-family: HK Grotesk;
   background-color: var(--color-bg);
-  color: var(--color-text-main)
+  color: var(--color-text-main);
+  padding:20px;
 }
 
-/* Button */
-button,
+/* Inputs */
 input {
   font-family: inherit;
   font-size: 100%;
@@ -53,14 +58,39 @@ input {
   transition: 500ms;
 }
 
+button {
+  font-family: inherit;
+  font-size: 100%;
+  background: var(--color-button-background);
+  color: var(--color-button-text);
+  border: 0px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.5rem 1rem
+}
+
+button:hover {
+  background-color: var(--color-button-hover);
+}
+
+button:active {
+  background-color: var(--color-button-pressed);
+}
+
 /* Title */
 h2 {
   color: var(--color-primary);
+  padding-bottom: 4px;
+  margin-bottom: 0px;
+  margin-top:0px;
 }
 
 /* Subheading */
 h4 {
   color: var(--color-primary);
+  padding-bottom: 4px;
+  margin-bottom: 0px;
+  margin-top:35px;
 }
 
 ul {
@@ -70,6 +100,6 @@ ul {
 }
 
 li {
-  border-top: 1px solid var(--color-primary);
+  border-top: 1px solid var(--color-text-main);
   padding:10px;
 }
