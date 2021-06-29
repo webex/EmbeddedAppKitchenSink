@@ -53,8 +53,13 @@ input {
   transition: 500ms;
 }
 
-/* Subheading */
+/* Title */
 h2 {
+  color: var(--color-primary);
+}
+
+/* Subheading */
+h4 {
   color: var(--color-primary);
 }
 
