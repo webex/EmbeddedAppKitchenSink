@@ -1,11 +1,10 @@
 /* Our default values set as CSS variables */
 :root {
-  --color-bg: #69F7BE;
-  --color-text-main: #000000;
-  --color-primary: #FFFF00;
-  --wrapper-height: 87vh;
-  --image-max-width: 300px;
-  --image-margin: 3rem;
+  --color-bg: #B2B2B2;
+  --color-text-main: #1C1C1C;
+  --color-primary: #F7F7F7;
+  --color-input-background: #FFFFFF;
+  --color-input-border: #000000;
   --font-family: "HK Grotesk";
   --font-family-header: "HK Grotesk";
 }
@@ -38,6 +37,7 @@ END default styles
 body {
   font-family: HK Grotesk;
   background-color: var(--color-bg);
+  color: var(--color-text-main)
 }
 
 /* Button */
@@ -45,8 +45,8 @@ button,
 input {
   font-family: inherit;
   font-size: 100%;
-  background: #FFFFFF;
-  border: 1px solid #000000;
+  background: var(--color-input-background);
+  border: 1px solid var(--color-input-border);
   box-sizing: border-box;
   border-radius: 4px;
   padding: 0.5rem 1rem;
@@ -55,7 +55,7 @@ input {
 
 /* Subheading */
 h2 {
-  color: #2800FF;
+  color: var(--color-primary);
 }
 
 ul {
@@ -65,6 +65,6 @@ ul {
 }
 
 li {
-  border-top: 1px solid #2800FF;
+  border-top: 1px solid var(--color-primary);
   padding:10px;
 }
