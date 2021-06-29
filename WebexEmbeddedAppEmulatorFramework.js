@@ -89,8 +89,8 @@ var Application = /*#__PURE__*/function () {
       "INVALID_ARGUMENT": 2,
       "EVENT_ALREADY_REGISTERED": 3,
       "EVENT_UNKNOWN": 4,
-      "SESSION_ALREADY_STARTED": 5,
-      "BAD_CONTEXT": 6
+      "BAD_CONTEXT": 5,
+      "NOT_SUPPORTED": 6
     };
     this.ApplicationTheme = {
       "DARK": 0,
