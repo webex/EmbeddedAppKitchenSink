@@ -7,9 +7,18 @@
   <!-- Import the app's stylesheet -->
   <link rel="stylesheet" href="./style.css" />
 
-  <!-- Import the SDK below, either the emulator sdk or the production SDK -->
-  <script src="./WebexEmbeddedAppEmulatorFramework.js" defer></script>
-  
+  <!-- Import the SDK below, either the emulator sdk or the production SDK based on a query param '?script=prod' -->
+  <script>
+	  var getVar = location.search;
+    if(getVar && getVar.indexOf('prod')>0){
+      console.log('loading the production script')
+      document.write('<script src="https://binaries.webex.com/preview-webex-jssdk/webex-embedded-app-sdk-master.js" defer><\\/script>');   
+    } else {
+      console.log('loading the emulator script')
+      document.write('<script src="./WebexEmbeddedAppEmulatorFramework.js" defer><\\/script>');   
+    }
+	</script>
+
   <!-- Import the app's javascript file -->
   <script src="./index.js" defer></script>
 </head>
