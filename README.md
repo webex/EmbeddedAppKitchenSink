@@ -1,6 +1,6 @@
 # Hello developer!
 
-This is a basic webed embedded sample application.  As most "kitchen sink" applications do, it exercises all the events and methods that the framework offers. Be creative! the real magic happens in your own imagination. 🦄
+This is a basic webex embedded sample application.  As most "kitchen sink" applications do, it exercises all the events and methods that the framework offers. Be creative! the real magic happens in your own imagination. 🦄
 
 ## What's in this project?
 
@@ -18,7 +18,7 @@ This is a basic webed embedded sample application.  As most "kitchen sink" appli
 
 ## Next steps 🚀
 
-Build and app.  You can fork this project or start from scratch. Simply replace the default app url in the emulator with your own app url... super easy!
+Build an app! You can fork this project or start from scratch. Simply replace the default app url in the emulator with your own app url... super easy!
 
 One final (and important!!) note: This project by default includes a special Mock SDK which is used specifically for the EMULATOR.  If you want your app to work in production simply include the production SDK in place of the emulator SDK.
 
