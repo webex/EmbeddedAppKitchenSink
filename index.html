@@ -12,7 +12,7 @@
     var getVar = location.search;
     if(getVar && getVar.indexOf('prod')>0){
       console.log('loading the production script');
-      document.write('<script src="https://binaries.webex.com/preview-webex-jssdk/webex-embedded-app-sdk-master.js" defer><\/script>');
+      document.write('<script src="https://binaries.webex.com/static-content-pipeline/webex-embedded-app/v1/webex-embedded-app-sdk.js" defer><\/script>');
     } else {
       console.log('loading the emulator script')
       document.write('<script src="./WebexEmbeddedAppEmulatorFramework.js" defer><\/script>');
