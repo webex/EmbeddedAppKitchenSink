@@ -6,21 +6,7 @@
   <title>HOST - Embedded Apps Kitchen Sink</title>
   <!-- Import the app's stylesheet -->
   <link rel="stylesheet" href="./style.css" />
-
-  <!-- Import the SDK below, either the emulator sdk or the production SDK based on a query param '?script=prod' -->
-  <script>
-    var getVar = location.search;
-    var isProd = ''
-    if(getVar && getVar.indexOf('prod')>0){
-      isProd = '?script=prod'
-      console.log('loading the production script');
-      document.write('<script src="https://binaries.webex.com/static-content-pipeline/webex-embedded-app/v1/webex-embedded-app-sdk.js" defer><\/script>');
-    } else {
-      console.log('loading the emulator script')
-      document.write('<script src="./WebexEmbeddedAppEmulatorFramework.js" defer><\/script>');
-    }
-  </script>
-
+  <script src="https://binaries.webex.com/static-content-pipeline/webex-embedded-app/v1/webex-embedded-app-sdk.js" defer></script>
   <!-- Import the app's javascript file -->
   <script src="./index.js" defer></script>
 </head>
@@ -33,10 +19,10 @@
 
     <h4>Launch the embedded app to participants</h4>
     <div>
-      <input id="shareUrl" placeholder="URL to open on participant" size="45" value="https://webexsamples.github.io/EmbeddedAppSample/participant.html" />  
+      <input id="shareUrl" placeholder="URL to open on participant" size="45" value="https://webexsamples.github.io/EmbeddedAppSample/participant.html" />
     </div>
     <div>
-      <button onclick="handleSetShare(isProd)">setShareUrl()</button>
+      <button onclick="handleSetShare()">setShareUrl()</button>
       <button onclick="handleClearShare()">clearShareUrl()</button>
     </div>
 
@@ -44,7 +30,7 @@
     <button onclick="handleGetUser()">getUser()</button>
     <button onclick="handleGetMeeting()">getMeeting()</button>
     <button onclick="handleGetSpace()">getSpace()</button>
-    
+
   </div>
   <h4>Recent Event Logs</h4>
   <div>

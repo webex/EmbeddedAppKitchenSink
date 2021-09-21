@@ -2,13 +2,14 @@ var app = new window.Webex.Application();
 
 app.onReady().then(() => {
   log('onReady()', {message:'host app is ready'})
-
-  app.listen('application:displayContextChanged', (payload) => log('application:displayContextChanged', payload));
-  app.listen('application:shareStateChanged', (payload) => log('application:shareStateChanged', payload));
-  app.listen('application:themeChanged', (payload) => log('application:themeChanged', payload));
-  app.listen('meeting:infoChanged', (payload) => log('meeting:infoChanged', payload));
-  app.listen('meeting:roleChanged', (payload) => log('meeting:roleChanged', payload));
-  app.listen('space:infoChanged', (payload) => log('space:infoChanged', payload));
+  app.listen().then(() => {
+    app.on('application:displayContextChanged', (payload) => log('application:displayContextChanged', payload));
+    app.on('application:shareStateChanged', (payload) => log('application:shareStateChanged', payload));
+    app.on('application:themeChanged', (payload) => log('application:themeChanged', payload));
+    app.on('meeting:infoChanged', (payload) => log('meeting:infoChanged', payload));
+    app.on('meeting:roleChanged', (payload) => log('meeting:roleChanged', payload));
+    app.on('space:infoChanged', (payload) => log('space:infoChanged', payload));
+  })
 });
 
 function handleGetUser(){
@@ -25,9 +26,6 @@ function handleGetSpace(){
 
 function handleSetShare(prod) {
   var url = document.getElementById("shareUrl").value
-  if(prod!=''){
-    url+=prod
-  }
   app.setShareUrl(url, url, 'Embedded App Kitchen Sink');
   log('setShareUrl()', {message:'shared url to participants panel',url:url})
 }
