@@ -24,7 +24,7 @@ function handleGetSpace(){
   app.context.getSpace().then((s) => log('getSpace()', s));
 }
 
-function handleSetShare(prod) {
+function handleSetShare() {
   var url = document.getElementById("shareUrl").value
   app.setShareUrl(url, url, 'Embedded App Kitchen Sink');
   log('setShareUrl()', {message:'shared url to participants panel',url:url})
