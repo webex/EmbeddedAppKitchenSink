@@ -35,6 +35,10 @@ function handleClearShare() {
   log('clearShareUrl()', {message:'share url has been cleared'})
 }
 
+function handleDisplayAppInfo() {
+  log('Display Application', app);
+}
+
 function log(type, data) {
   var ul = document.getElementById("console");
   var li = document.createElement("li");
