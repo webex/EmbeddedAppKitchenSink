@@ -24,6 +24,10 @@ function handleGetSpace() {
   app.context.getSpace().then((s) => log('getSpace()', s));
 }
 
+function handleDisplayAppInfo() {
+  log('Display Application', app);
+}
+
 function log(type, data) {
   var ul = document.getElementById("console");
   var li = document.createElement("li");
