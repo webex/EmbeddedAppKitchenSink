@@ -1,42 +1,53 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>HOST - Embedded Apps Kitchen Sink</title>
-  <!-- Import the app's stylesheet -->
-  <link rel="stylesheet" href="./style.css" />
-  <script src="https://binaries.webex.com/static-content-pipeline/webex-embedded-app/v1/webex-embedded-app-sdk.js" defer></script>
-  <!-- Import the app's javascript file -->
-  <script src="./index.js" defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>HOST - Embedded Apps Kitchen Sink</title>
+    <!-- Import the app's stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://binaries.webex.com/static-content-pipeline/webex-embedded-app/v1/webex-embedded-app-sdk.js" defer></script>
+    <!-- Import the app's javascript file -->
+    <script src="./index.js" defer></script>
 </head>
+
 <body>
-  <div>
-    <h2>Embedded App Kitchen Sink</h2>
     <div>
-      You're the HOST... On this page you will configure the embedded application and launch it for everyone. This sample application shows how to utilize the Webex Embedded App Emulator Framework to build an app.  <a href="https://github.com/WebexSamples/EmbeddedAppSample">Click Here</a> to see the source.
-    </div>
+        <h2>Embedded App Kitchen Sink</h2>
+        <div>
+            You're the HOST... On this page you will configure the embedded application and launch it for everyone. This sample application shows how to utilize the Webex Embedded App Emulator Framework to build an app. <a href="https://github.com/WebexSamples/EmbeddedAppSample">Click Here</a>            to see the source.
+        </div>
 
-    <h4>Launch the embedded app to participants</h4>
+        <h4>Launch the embedded app to participants</h4>
+        <div>
+            <input id="shareUrl" placeholder="URL to open on participant" size="45" value="https://webexsamples.github.io/EmbeddedAppSample/participant.html" />
+        </div>
+        <div>
+            <button onclick="handleSetShare()">setShareUrl()</button>
+            <button onclick="handleClearShare()">clearShareUrl()</button>
+        </div>
+
+        <h4>Methods</h4>
+        <button onclick="handleGetUser()">getUser()</button>
+        <button onclick="handleGetMeeting()">getMeeting()</button>
+        <button onclick="handleGetSpace()">getSpace()</button>
+        <button onclick="handleDisplayAppInfo()">Log Application Object</button>
+
+
+        <div>
+            <h4>Cookies!</h4>
+            <input id="cookieField" placeholder="Enter a cookie value"><br/><br/>
+            <button onclick="handleSetCookie()">Set Cookie</button>
+            <button onclick="handleGetCookie()">Get Cookie</button>
+            <button onclick="handleClearCookie()">Clear Cookie</button>
+        </div>
+
+    </div>
+    <h4>Recent Event Logs</h4>
     <div>
-      <input id="shareUrl" placeholder="URL to open on participant" size="45" value="https://webexsamples.github.io/EmbeddedAppSample/participant.html" />
+        <ul id="console" />
     </div>
-    <div>
-      <button onclick="handleSetShare()">setShareUrl()</button>
-      <button onclick="handleClearShare()">clearShareUrl()</button>
-    </div>
-
-    <h4>Methods</h4>
-    <button onclick="handleGetUser()">getUser()</button>
-    <button onclick="handleGetMeeting()">getMeeting()</button>
-    <button onclick="handleGetSpace()">getSpace()</button>
-    <button onclick="handleDisplayAppInfo()">Log Application Object</button>
-
-  </div>
-  <h4>Recent Event Logs</h4>
-  <div>
-    <ul id="console" />
-  </div>
 </body>
-</html>
 
+</html>
