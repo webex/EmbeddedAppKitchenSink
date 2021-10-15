@@ -34,13 +34,27 @@
         <button onclick="handleGetSpace()">getSpace()</button>
         <button onclick="handleDisplayAppInfo()">Log Application Object</button>
 
-
+        <h3>Storage Choices</h3>
         <div>
             <h4>Cookies!</h4>
             <input id="cookieField" placeholder="Enter a cookie value"><br/><br/>
             <button onclick="handleSetCookie()">Set Cookie</button>
             <button onclick="handleGetCookie()">Get Cookie</button>
             <button onclick="handleClearCookie()">Clear Cookie</button>
+        </div>
+        <div>
+            <h4>localStorage!</h4>
+            <input id="localField" placeholder="Enter a localStorage value"><br/><br/>
+            <button onclick="handleSetLocalStorage()">Set Cookie</button>
+            <button onclick="handleGetLocalStorage()">Get Cookie</button>
+            <button onclick="handleClearLocalStorage()">Clear localStorage</button>
+        </div>
+        <div>
+            <h4>sessionStorage!</h4>
+            <input id="sessionField" placeholder="Enter a sessionStorage value"><br/><br/>
+            <button onclick="handleSetSessionStorage()">Set sessionStorage</button>
+            <button onclick="handleGetSessionStorage()">Get sessionStorage</button>
+            <button onclick="handleClearSessionStorage()">Clear sessionStorage</button>
         </div>
 
     </div>

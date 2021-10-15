@@ -72,6 +72,7 @@ function handleClearCookie() {
 } // End handleClearCookie()
 
 
+
 /** Source: https://www.w3schools.com/js/js_cookies.asp **/
 function setCookie(cname, cvalue, exdays) {
     const d = new Date();
@@ -94,3 +95,64 @@ function getCookie(cname) {
     }
     return "";
 }
+
+/** localStorage! **/
+
+function handleSetLocalStorage(){
+    let myValue = document.getElementById("localField").value;
+    setLocalStorage("testLocalStorage", myValue);
+    log('localStorage set!', myValue);
+}
+function handleGetLocalStorage(){
+    let myValue = document.getElementById("localField").value;
+    log('localStorage get!', myValue);
+    return getLocalStorage(myValue);
+}
+
+function handleClearLocalStorage(){
+    log('localStorage cleared!', myValue);
+    window.localStorage.clear();
+}
+
+function deleteLocalStorageItem(key){
+    window.localStorage.removeItem(key);
+}
+function getLocalStorage(keyName){
+    const myStorage = window.localStorage.getItem(keyName);
+    return myStorage;
+}
+
+function setLocalStorage(key, value){
+    window.localStorage.setItem(key,value);
+}
+
+/** sessionStorage! **/
+
+function handleSetSessionStorage(){
+    let myValue = document.getElementById("sessionField").value;
+    setLocalStorage("testLocalStorage", myValue);
+    log('sessionStorage set!', myValue);
+}
+function handleGetSessionStorage(){
+    let myValue = document.getElementById("sessionField").value;
+    log('sessionStorage get!', myValue);
+    return getSessionStorage(myValue);
+}
+
+function handleClearSessionStorage(){
+    log('sessionStorage cleared!', myValue);
+    window.sessionStorage.clear();
+}
+
+function deleteSessionStorageItem(key){
+    window.sessionStorage.removeItem(key);
+}
+function getSessionStorage(keyName){
+    const myStorage = window.sessionStorage.getItem(keyName);
+    return myStorage;
+}
+
+function setLocalStorage(key, value){
+    window.sessionStorage.setItem(key,value);
+}
+
