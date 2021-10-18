@@ -130,7 +130,7 @@ function setLocalStorage(key, value){
 
 function handleSetSessionStorage(){
     let myValue = document.getElementById("sessionField").value;
-    setLocalStorage("testLocalStorage", myValue);
+    setSessionStorage("exampleKey", myValue);
     log('sessionStorage set!', myValue);
 }
 function handleGetSessionStorage(){
@@ -152,7 +152,6 @@ function getSessionStorage(keyName){
     return myStorage;
 }
 
-function setLocalStorage(key, value){
+function setSessionStorage(key, value){
     window.sessionStorage.setItem(key,value);
 }
-
