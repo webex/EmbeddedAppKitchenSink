@@ -12,7 +12,7 @@ app.onReady().then(() => {
     })
 });
 
-function handleGetUser(){
+function handleGetUser() {
     app.context.getUser().then((u) => {
         log('getUser()', u);
     }).catch((error) => {
