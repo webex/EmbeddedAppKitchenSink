@@ -1,3 +1,7 @@
+const COOKIE_NAME = "webex_kitchen_sink_cookie";
+const LOCAL_STORAGE_NAME = "webex_kitchen_sink_localstorage";
+const SESSION_STORAGE_NAME = "webex_kitchen_sink_sessionstorage";
+
 var app = new window.Webex.Application();
 
 app.onReady().then(() => {
@@ -64,25 +68,24 @@ function log(type, data) {
 
 /** Cookies! **/
 
-function getCookieValue() {
+function getCookieInputValue() {
     let myValue = document.getElementById("cookieField").value;
-    log("My cookie value: ", myValue);
     return myValue;
 }
 
 function handleSetCookie() {
-    let myCookieValue = getCookieValue();
-    setCookie("testcookie", myCookieValue, 365);
+    let myCookieValue = getCookieInputValue();
+    setCookie(COOKIE_NAME, myCookieValue, 365);
     log('Cookie set!', myCookieValue);
 } // End handleSetCookie()
 
 function handleGetCookie() {
-    let myCookie = getCookie("testcookie");
+    let myCookie = getCookie(COOKIE_NAME);
     log('Cookie get! ', myCookie);
 } // End handleGetCookie()
 
 function handleClearCookie() {
-    document.cookie = "testcookie=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = `${COOKIE_NAME}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
     log('Cookie cleared!', document.cookie);
 } // End handleClearCookie()
 
@@ -115,48 +118,47 @@ function getCookie(cname) {
 
 function handleSetLocalStorage(){
     let myValue = document.getElementById("localField").value;
-    setLocalStorage("testLocalStorage", myValue);
+    setLocalStorage(LOCAL_STORAGE_NAME, myValue);
     log('localStorage set!', myValue);
 }
 function handleGetLocalStorage(){
-    let myValue = document.getElementById("localField").value;
+    let myValue = getLocalStorage(LOCAL_STORAGE_NAME);
     log('localStorage get!', myValue);
-    return getLocalStorage(myValue);
 }
 
 function handleClearLocalStorage(){
-    log('localStorage cleared!', myValue);
-    window.localStorage.clear();
+    deleteLocalStorageItem(LOCAL_STORAGE_NAME);
+    log('localStorage cleared!', getLocalStorage(LOCAL_STORAGE_NAME));
 }
 
 function deleteLocalStorageItem(key){
     window.localStorage.removeItem(key);
 }
+
 function getLocalStorage(keyName){
     const myStorage = window.localStorage.getItem(keyName);
     return myStorage;
 }
 
 function setLocalStorage(key, value){
-    window.localStorage.setItem(key,value);
+    window.localStorage.setItem(key, value);
 }
 
 /** sessionStorage! **/
 
 function handleSetSessionStorage(){
     let myValue = document.getElementById("sessionField").value;
-    setSessionStorage("exampleKey", myValue);
+    setSessionStorage(SESSION_STORAGE_NAME, myValue);
     log('sessionStorage set!', myValue);
 }
 function handleGetSessionStorage(){
-    let myValue = document.getElementById("sessionField").value;
+    let myValue = getSessionStorage(SESSION_STORAGE_NAME);
     log('sessionStorage get!', myValue);
-    return getSessionStorage(myValue);
 }
 
 function handleClearSessionStorage(){
-    log('sessionStorage cleared!', myValue);
-    window.sessionStorage.clear();
+    deleteSessionStorageItem(SESSION_STORAGE_NAME);
+    log('sessionStorage cleared!', getSessionStorage(SESSION_STORAGE_NAME));
 }
 
 function deleteSessionStorageItem(key){
