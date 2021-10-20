@@ -13,21 +13,36 @@ app.onReady().then(() => {
 });
 
 function handleGetUser() {
-    app.context.getUser().then((u) => log('getUser()', u));
+    app.context.getUser().then((u) => {
+        log('getUser()', u);
+    }).catch((error) => {
+        log('getUser() promise failed with error', Webex.Application.ErrorCodes[error]);
+    })
 }
 
 function handleGetMeeting() {
-    app.context.getMeeting().then((m) => log('getMeeting()', m));
+    app.context.getMeeting().then((m) => {
+        log('getMeeting()', m);
+    }).catch((error) => {
+        log('getMeeting() promise failed with error', Webex.Application.ErrorCodes[error]);
+    });
 }
 
 function handleGetSpace() {
-    app.context.getSpace().then((s) => log('getSpace()', s));
+    app.context.getSpace().then((s) => {
+        log('getSpace()', s);
+    }).catch((error) => {
+        log('getSpace() promise failed with error', Webex.Application.ErrorCodes[error]);
+    });
 }
 
 function handleSetShare() {
     var url = document.getElementById("shareUrl").value
-    app.setShareUrl(url, url, 'Embedded App Kitchen Sink');
-    log('setShareUrl()', { message: 'shared url to participants panel', url: url })
+    app.setShareUrl(url, url, 'Embedded App Kitchen Sink').then(() => {
+        log('setShareUrl()', { message: 'shared url to participants panel', url: url })
+    }).catch((error) => {
+        log('setShareUrl() failed with error', Webex.Application.ErrorCodes[error]);
+    });
 }
 
 function handleClearShare() {
