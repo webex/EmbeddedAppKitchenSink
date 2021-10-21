@@ -41,7 +41,11 @@ function handleGetSpace() {
 }
 
 function handleSetShare() {
-    var url = document.getElementById("shareUrl").value
+    if (app.isShared) {
+      log('ERROR: setShareUrl() should not be called while session is active');
+      return;
+    }
+    var url = document.getElementById("shareUrl").value;
     app.setShareUrl(url, url, 'Embedded App Kitchen Sink').then(() => {
         log('setShareUrl()', { message: 'shared url to participants panel', url: url })
     }).catch((error) => {
