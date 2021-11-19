@@ -54,8 +54,11 @@ function handleSetShare() {
 }
 
 function handleClearShare() {
-    app.clearShareUrl();
-    log('clearShareUrl()', { message: 'share url has been cleared' })
+    app.clearShareUrl().then(() => {
+        log('clearShareUrl()', { message: 'share url has been cleared' })
+    }).catch((error) => {
+        log('clearShareUrl() failed with error', Webex.Application.ErrorCodes[error]);
+    });
 }
 
 function handleDisplayAppInfo() {
