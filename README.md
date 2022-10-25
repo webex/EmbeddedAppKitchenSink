@@ -18,9 +18,7 @@ This is a basic Webex embedded sample application.  As most "kitchen sink" appli
 
 ## Next steps 🚀
 
-Build an app! You can fork this project or start from scratch. Simply replace the default app URL in the emulator with your own app URL... super easy!
-
-One final (and important!!) note: This project includes a special Mock SDK which is used specifically for the EMULATOR. There is code included in index.html to conditionally include the production SDK in place of the emulator SDK when in production.
+Build an app! You can fork this project or start from scratch. Simply replace the default app URL in the Webex app with your own app URL... super easy!
 
 - Need more help? [Check out our Help Center](https://support.webex.com/) for answers to any common questions.
 - Ready to launch? [Deploy your app today](https://apphub.webex.com) to reach webex users in unique and clever ways, be the hero you always wanted to be.
