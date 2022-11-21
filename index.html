@@ -1,67 +1,88 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>HOST - Embedded Apps Kitchen Sink</title>
     <!-- Import the app's stylesheet -->
     <link rel="stylesheet" href="./style.css" />
-    <script src="https://binaries.webex.com/static-content-pipeline/webex-embedded-app/v1/webex-embedded-app-sdk.js" defer></script>
+    <script
+      src="https://binaries.webex.com/static-content-pipeline/webex-embedded-app/v1/webex-embedded-app-sdk.js"
+      defer
+    ></script>
     <!-- Import the app's javascript file -->
     <script src="./index.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div>
-        <h2>Embedded App Kitchen Sink</h2>
-        <div>
-            You're the HOST... On this page you will configure the embedded application and launch it for everyone. This sample application shows how to utilize the Webex Embedded App Framework to build an app. <a href="https://github.com/WebexSamples/EmbeddedAppSample">View source on GitHub</a>.
-        </div>
+      <h2>Embedded App Kitchen Sink</h2>
+      <div>
+        You're the HOST... On this page you will configure the embedded
+        application and launch it for everyone. This sample application shows
+        how to utilize the Webex Embedded App Framework to build an app.
+        <a href="https://github.com/WebexSamples/EmbeddedAppSample"
+          >View source on GitHub</a
+        >.
+      </div>
 
-        <h4>Launch the embedded app to participants</h4>
-        <div>
-            <input id="shareUrl" placeholder="URL to open on participant" size="45" value="https://webexsamples.github.io/EmbeddedAppSample/participant.html" />
-        </div>
-        <div>
-            <button onclick="handleSetShare()">setShareUrl()</button>
-            <button onclick="handleClearShare()">clearShareUrl()</button>
-        </div>
+      <h4>Launch the embedded app to participants</h4>
+      <div>
+        <input
+          id="shareUrl"
+          placeholder="URL to open on participant"
+          size="45"
+          value="https://webexsamples.github.io/EmbeddedAppSample/participant.html"
+        />
+      </div>
+      <div>
+        <button onclick="handleSetShare()">setShareUrl()</button>
+        <button onclick="handleClearShare()">clearShareUrl()</button>
+      </div>
 
-        <h4>Methods</h4>
-        <button onclick="handleGetUser()">getUser()</button>
-        <button onclick="handleGetMeeting()">getMeeting()</button>
-        <button onclick="handleGetSpace()">getSpace()</button>
-        <button onclick="handleDisplayAppInfo()">Log Application Object</button>
+      <h4>Methods</h4>
+      <button onclick="handleGetUser()">getUser()</button>
+      <button onclick="handleGetMeeting()">getMeeting()</button>
+      <button onclick="handleGetSpace()">getSpace()</button>
+      <button onclick="handleDisplayAppInfo()">Log Application Object</button>
 
-        <h3>Storage Choices</h3>
-        <div>
-            <h4>Cookies!</h4>
-            <input id="cookieField" placeholder="Enter a cookie value"><br/><br/>
-            <button onclick="handleSetCookie()">Set Cookie</button>
-            <button onclick="handleGetCookie()">Get Cookie</button>
-            <button onclick="handleClearCookie()">Clear Cookie</button>
-        </div>
-        <div>
-            <h4>localStorage!</h4>
-            <input id="localField" placeholder="Enter a localStorage value"><br/><br/>
-            <button onclick="handleSetLocalStorage()">Set localStorage</button>
-            <button onclick="handleGetLocalStorage()">Get localStorage</button>
-            <button onclick="handleClearLocalStorage()">Clear localStorage</button>
-        </div>
-        <div>
-            <h4>sessionStorage!</h4>
-            <input id="sessionField" placeholder="Enter a sessionStorage value"><br/><br/>
-            <button onclick="handleSetSessionStorage()">Set sessionStorage</button>
-            <button onclick="handleGetSessionStorage()">Get sessionStorage</button>
-            <button onclick="handleClearSessionStorage()">Clear sessionStorage</button>
-        </div>
-
+      <h3>Storage Choices</h3>
+      <div>
+        <h4>Cookies!</h4>
+        <input
+          id="cookieField"
+          placeholder="Enter a cookie value"
+        /><br /><br />
+        <button onclick="handleSetCookie()">Set Cookie</button>
+        <button onclick="handleGetCookie()">Get Cookie</button>
+        <button onclick="handleClearCookie()">Clear Cookie</button>
+      </div>
+      <div>
+        <h4>localStorage!</h4>
+        <input
+          id="localField"
+          placeholder="Enter a localStorage value"
+        /><br /><br />
+        <button onclick="handleSetLocalStorage()">Set localStorage</button>
+        <button onclick="handleGetLocalStorage()">Get localStorage</button>
+        <button onclick="handleClearLocalStorage()">Clear localStorage</button>
+      </div>
+      <div>
+        <h4>sessionStorage!</h4>
+        <input
+          id="sessionField"
+          placeholder="Enter a sessionStorage value"
+        /><br /><br />
+        <button onclick="handleSetSessionStorage()">Set sessionStorage</button>
+        <button onclick="handleGetSessionStorage()">Get sessionStorage</button>
+        <button onclick="handleClearSessionStorage()">
+          Clear sessionStorage
+        </button>
+      </div>
     </div>
     <h4>Recent Event Logs</h4>
     <div>
-        <ul id="console" />
+      <ul id="console" />
     </div>
-</body>
-
+  </body>
 </html>
