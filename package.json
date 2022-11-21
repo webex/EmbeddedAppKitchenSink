@@ -1,0 +1,22 @@
+{
+  "name": "webex-embedded-app-sample",
+  "version": "1.0.0",
+  "description": "Example of the Webex Embedded App Framework usage",
+  "scripts": {
+    "start": "http-server ./public",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebexSamples/EmbeddedAppSample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WebexSamples/EmbeddedAppSample/issues"
+  },
+  "homepage": "https://github.com/WebexSamples/EmbeddedAppSample#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
