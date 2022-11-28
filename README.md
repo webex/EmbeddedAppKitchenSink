@@ -5,13 +5,13 @@ This is a basic web application enabled with the [Webex Embedded Apps Framework]
 ## What's in this project?
 
 - `README.md`: That's this file, an intro to what each file is and the details about the project.
-- `style.css`: CSS files add styling rules to your content. We intentionally left things a bit sparse; feel free to expand on the look and feel as you see fit.
-- `index.html`: This is the root page of the site; it also happens to be the "host" configuration page where an app is set up and prepared to be "pushed" (deployed) to the participants!
-- `index.js`: This page contains the JavaScript which makes the index page do its magic. Feel free to poke around and see how simple it is to call methods and receive events!
-- `participant.html`: This is the page that is pushed out to a participant; it has similar methods and events as the main page!
-- `participant.js`: This page contains the JavaScript which feeds the participant experience. Feel free to poke around and see how simple it is to call methods and receive events!
-- `utils.js`: This page contains the JavaScript with common utilities and functions across the applications.
-- `loginWithWebex.js`: This page contains the JavaScript which handles the [Login with Webex](https://developer.webex.com/docs/login-with-webex) functionality.
+- `docs/style.css`: CSS files add styling rules to your content. We intentionally left things a bit sparse; feel free to expand on the look and feel as you see fit.
+- `docs/index.html`: This is the root page of the site; it also happens to be the "host" configuration page where an app is set up and prepared to be "pushed" (deployed) to the participants!
+- `docs/index.js`: This page contains the JavaScript which makes the index page do its magic. Feel free to poke around and see how simple it is to call methods and receive events!
+- `docs/participant.html`: This is the page that is pushed out to a participant; it has similar methods and events as the main page!
+- `docs/participant.js`: This page contains the JavaScript which feeds the participant experience. Feel free to poke around and see how simple it is to call methods and receive events!
+- `docs/utils.js`: This page contains the JavaScript with common utilities and functions across the applications.
+- `docs/loginWithWebex.js`: This page contains the JavaScript which handles the [Login with Webex](https://developer.webex.com/docs/login-with-webex) functionality.
 
 
 ## Next steps 🚀
