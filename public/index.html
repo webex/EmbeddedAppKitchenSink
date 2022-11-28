@@ -10,6 +10,8 @@
       src="https://binaries.webex.com/static-content-pipeline/webex-embedded-app/v1/webex-embedded-app-sdk.js"
       defer
     ></script>
+    <script src="./utils.js" defer></script>
+    <script src="./loginWithWebex.js" defer></script>
     <!-- Import the app's javascript file -->
     <script src="./index.js" defer></script>
   </head>
@@ -18,12 +20,15 @@
     <div>
       <h2>Embedded App Kitchen Sink</h2>
       <div>
-        You're the HOST... On this page you will configure the embedded
-        application and launch it for everyone. This sample application shows
-        how to utilize the Webex Embedded App Framework to build an app.
-        <a href="https://github.com/WebexSamples/EmbeddedAppSample"
-          >View source on GitHub</a
-        >.
+        <p>This sample application shows how to utilize the Webex Embedded App Framework to build an app.</p>
+        <p>
+          You're the HOST... On this page you will configure the embedded
+          application and launch it for everyone. <a href="./participant.html">Click here for participant view.</a> This sample application shows
+          how to utilize the Webex Embedded App Framework to build an app.
+        </p>
+        <p>
+          <a href="https://github.com/WebexSamples/EmbeddedAppSample">View source on GitHub</a>.
+        </p>
       </div>
 
       <h4>Launch the embedded app to participants</h4>
@@ -46,43 +51,14 @@
       <button onclick="handleGetSpace()">getSpace()</button>
       <button onclick="handleDisplayAppInfo()">Log Application Object</button>
 
-      <h3>Storage Choices</h3>
-      <div>
-        <h4>Cookies!</h4>
-        <input
-          id="cookieField"
-          placeholder="Enter a cookie value"
-        /><br /><br />
-        <button onclick="handleSetCookie()">Set Cookie</button>
-        <button onclick="handleGetCookie()">Get Cookie</button>
-        <button onclick="handleClearCookie()">Clear Cookie</button>
-      </div>
-      <div>
-        <h4>localStorage!</h4>
-        <input
-          id="localField"
-          placeholder="Enter a localStorage value"
-        /><br /><br />
-        <button onclick="handleSetLocalStorage()">Set localStorage</button>
-        <button onclick="handleGetLocalStorage()">Get localStorage</button>
-        <button onclick="handleClearLocalStorage()">Clear localStorage</button>
-      </div>
-      <div>
-        <h4>sessionStorage!</h4>
-        <input
-          id="sessionField"
-          placeholder="Enter a sessionStorage value"
-        /><br /><br />
-        <button onclick="handleSetSessionStorage()">Set sessionStorage</button>
-        <button onclick="handleGetSessionStorage()">Get sessionStorage</button>
-        <button onclick="handleClearSessionStorage()">
-          Clear sessionStorage
-        </button>
-      </div>
+      <h4>Authorization</h4>
+      <button onclick="handleLoginWithWebex()">"Login with Webex"</button>
+
+      <h4>Logs</h4>
     </div>
-    <h4>Recent Event Logs</h4>
-    <div>
-      <ul id="console" />
+    <div class="logs">
+      <ul id="console">
+      </ul>
     </div>
   </body>
 </html>
