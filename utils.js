@@ -76,3 +76,39 @@ function handleGetSpace() {
       );
     });
 }
+
+/**
+ * Initiates the System Browser OAuth flow for SSO
+ */
+function handleSystemBrowserOAuth() {
+  // System Browser OAuth Support is only for 1.5.0 SDK and above
+  log('app.isSdkSupported("1.5.0")', app.isSdkSupported("1.5.0"));
+  if (!app.isSdkSupported("1.5.0")) {
+    return;
+  }
+  // The redirect from your SSO flow needs to return to this Webex address
+  const webexAppRedirectUri =
+    "https://oauth-helper-prod.wbx2.com/helperservice/v1/callback";
+  // We are utiling mocklab to demonstrate an SSO Flow
+  // Be sure to add the SSO domain to your "valid domains" configuration
+  const SSOAuthUrl = `https://oauth.mocklab.io/oauth/authorize?response_type=code&redirect_uri=${webexAppRedirectUri}`;
+
+  log("Initiating SSO flow in system browser", true);
+  // Initiate SSO flow in system browser
+  app
+    .initiateSystemBrowserOAuth(SSOAuthUrl)
+    .then(function (response) {
+      // Promise fulfilled, get authorization code from JSON response
+      let authCode = response;
+      log("SSO flow got authorization code", authCode);
+      // Exchange authorization code for a token with ID provider.
+      // This part of the OAuth flow is the responsibility of the embedded app, for example:
+      // exchangeCodeForToken(authCode);
+    })
+    .catch(function (reason) {
+      console.error(
+        "initiateSystemBrowserOAuth() failed with reason=",
+        window.Webex.Application.ErrorCodes[reason]
+      );
+    });
+}

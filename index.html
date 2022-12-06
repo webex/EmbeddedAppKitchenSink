@@ -4,7 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>HOST - Embedded Apps Kitchen Sink</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+    />
     <!-- Import the app's stylesheet -->
     <link rel="stylesheet" href="./style.css" />
     <script
@@ -21,14 +24,21 @@
     <div>
       <h2>Embedded App Kitchen Sink</h2>
       <div>
-        <p>This sample application shows how to utilize the Webex Embedded App Framework to build an app.</p>
         <p>
-          You're the HOST... On this page you will configure the embedded
-          application and launch it for everyone. <a href="./participant.html">Click here for participant view.</a> This sample application shows
-          how to utilize the Webex Embedded App Framework to build an app.
+          This sample application shows how to utilize the Webex Embedded App
+          Framework to build an app.
         </p>
         <p>
-          <a href="https://github.com/WebexSamples/EmbeddedAppSample">View source on GitHub</a>.
+          You're the HOST... On this page you will configure the embedded
+          application and launch it for everyone.
+          <a href="./participant.html">Click here for participant view.</a> This
+          sample application shows how to utilize the Webex Embedded App
+          Framework to build an app.
+        </p>
+        <p>
+          <a href="https://github.com/WebexSamples/EmbeddedAppSample"
+            >View source on GitHub</a
+          >.
         </p>
       </div>
 
@@ -54,12 +64,14 @@
 
       <h4>Authorization</h4>
       <button onclick="handleLoginWithWebex()">"Login with Webex"</button>
+      <button onclick="handleSystemBrowserOAuth()">
+        initiateSystemBrowserOAuth()
+      </button>
 
       <h4>Logs</h4>
     </div>
     <div class="logs">
-      <ul id="console">
-      </ul>
+      <ul id="console"></ul>
     </div>
   </body>
 </html>
