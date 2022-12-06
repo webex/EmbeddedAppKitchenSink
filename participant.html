@@ -4,7 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>PARTICIPANT - Embedded Apps Kitchen Sink</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+    />
     <!-- Import the app's stylesheet -->
     <link rel="stylesheet" href="./style.css" />
     <script
@@ -20,13 +23,19 @@
     <div>
       <h2>Participant View</h2>
       <div>
-        <p>This sample application shows how to utilize the Webex Embedded App Framework to build an app.</p>
         <p>
-          You're the PARTICIPANT... On this page you will see the embedded
-          application that was launched by the host. <a href="./">Click here for host view.</a>
+          This sample application shows how to utilize the Webex Embedded App
+          Framework to build an app.
         </p>
         <p>
-          <a href="https://github.com/WebexSamples/EmbeddedAppSample">View source on GitHub</a>.
+          You're the PARTICIPANT... On this page you will see the embedded
+          application that was launched by the host.
+          <a href="./">Click here for host view.</a>
+        </p>
+        <p>
+          <a href="https://github.com/WebexSamples/EmbeddedAppSample"
+            >View source on GitHub</a
+          >.
         </p>
       </div>
       <h4>Methods</h4>
@@ -37,10 +46,12 @@
     </div>
     <h4>Authorization</h4>
     <button onclick="handleLoginWithWebex()">"Login with Webex"</button>
+    <button onclick="handleSystemBrowserOAuth()">
+      initiateSystemBrowserOAuth()
+    </button>
     <h4>Recent Event Logs</h4>
     <div class="logs">
-      <ul id="console">
-      </ul>
+      <ul id="console"></ul>
     </div>
   </body>
 </html>
