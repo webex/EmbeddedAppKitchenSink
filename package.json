@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Example of the Webex Embedded App Framework usage",
   "scripts": {
-    "start": "http-server -S -p 3000 ./docs",
+    "start": "http-server -S -p 3000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
