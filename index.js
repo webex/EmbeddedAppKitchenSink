@@ -69,3 +69,48 @@ function handleClearShare() {
       );
     });
 }
+
+/**
+ * Sets the presentation URL
+ */
+async function handleSetPresentationUrl() {
+  if (app.isShared) {
+    log("ERROR: setShareUrl() should not be called while session is active");
+    return;
+  }
+  var url = document.getElementById("shareUrl").value;
+  let meeting = await app.context.getMeeting();
+  meeting.setPresentationUrl(url, "My Presentation", Webex.Application.ShareOptimizationMode.AUTO_DETECT, false)
+    .then(() => {
+      log("setPresentationUrl()", {
+        message: "presented url to participants panel",
+        url: url,
+      });
+    })
+    .catch((error) => {
+      log(
+        "setPresentationUrl() failed with error",
+        Webex.Application.ErrorCodes[error]
+      );
+    });
+}
+
+/**
+ * Clears the set presentation url
+ */
+async function handleClearPresentationUrl() {
+  let meeting = await app.context.getMeeting();
+  meeting.clearPresentationUrl()
+    .then(() => {
+      log("clearPresentationUrl()", {
+        message: "cleared url to participants panel",
+        url: url,
+      });
+    })
+    .catch((error) => {
+      log(
+        "clearPresentationUrl() failed with error",
+        Webex.Application.ErrorCodes[error]
+      );
+    });
+}
